@@ -1,0 +1,37 @@
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
+Twitter_Email = "SHUBHAMHARANIY1"
+Twitter_Pass = "9426380974sp"
+driver = webdriver.Chrome()
+driver.get("https://twitter.com/login")
+driver.implicitly_wait(5.0)
+UserName = driver.find_element(by=By.NAME,value='text')
+UserName.send_keys(Twitter_Email)
+driver.implicitly_wait(5.0)
+next = driver.find_element(by=By.XPATH, value='//*[@id="layers"]/div/div/div/div/div/div/div[2]/div[2]/div/div/div[2]/div[2]/div/div/div/div[6]')
+next.click()
+driver.implicitly_wait(5.0)
+password = driver.find_element(by=By.NAME,value="password")
+password.send_keys(Twitter_Pass)
+driver.implicitly_wait(5.0)
+password.send_keys(Keys.ENTER)
+driver.implicitly_wait(5.0)
+search = driver.find_element(by=By.XPATH, value='//*[@id="react-root"]/div/div/div[2]/header/div/div/div/div[1]/div[2]/nav/a[2]/div') 
+search.click()
+driver.implicitly_wait(5.0)
+input = driver.find_element(by=By.XPATH , value='//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[1]/div[1]/div[1]/div/div/div/div/div[1]/div[2]/div/div/div/form/div[1]/div/div/div/label/div[2]/div/input')
+input.send_keys('imRo45')
+input.send_keys(Keys.ENTER)
+driver.implicitly_wait(5.0)
+account = driver.find_element(by=By.XPATH, value='//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[3]/div/section/div/div/div[3]/div/div/div')
+account.click()
+driver.implicitly_wait(5.0)
+follow = driver.find_element(by=By.XPATH,value='//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[3]/div/div/div/div/div[1]/div[2]/div[2]/div[1]/div')
+follow.click()
+
+tweet_messsage = driver.find_element(by=By.XPATH, value = '//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[3]/div/div[2]/div[1]/div/div/div/div[2]/div[1]/div/div/div/div/div/div/div/div/div/div/label/div[1]/div/div/div/div/div/div[2]/div/div/div/div')
+tweet_messsage.send_keys('HAPPY DIWALI')
+driver.implicitly_wait(5.0)
+tweet = driver.find_element(by=By.XPATH,value='//*[@id="react-root"]/div/div/div[2]/main/div/div/div/div/div/div[3]/div/div[2]/div[1]/div/div/div/div[2]/div[3]/div/div/div[2]/div[3]')
+tweet.click()
