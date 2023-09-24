@@ -3,8 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 import time
-Insta_User = "i_spidy_18"
-Insta_Pass = "9426380974sp"
+Insta_User = "Enter Your Email"
+Insta_Pass = "Enter Yout Password"
 driver = webdriver.Chrome()
 driver.get("https://www.instagram.com/accounts/login/")
 driver.implicitly_wait(5.0)
