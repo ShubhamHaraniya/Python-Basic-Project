@@ -1,8 +1,8 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-Twitter_Email = "SHUBHAMHARANIY1"
-Twitter_Pass = "9426380974sp"
+Twitter_Email = "Enter Your Email"
+Twitter_Pass = "Enter Your Password"
 driver = webdriver.Chrome()
 driver.get("https://twitter.com/login")
 driver.implicitly_wait(5.0)
