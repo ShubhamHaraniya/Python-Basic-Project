@@ -1,6 +1,6 @@
 from selenium import webdriver   
 from selenium.webdriver.common.by import By
-chrome_driver_path = "\\Users\\sphar\\Desktop\\Python 101\\Driver\\chromedriver"
+chrome_driver_path = "chromedriver_Path"
 driver = webdriver.Chrome(executable_path = chrome_driver_path)
 driver.get("https://www.python.org/")
 dates = driver.find_elements(by= By.CSS_SELECTOR,value=".event-widget time")
