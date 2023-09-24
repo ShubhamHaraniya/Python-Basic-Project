@@ -1,7 +1,7 @@
 from selenium import webdriver   
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
-chrome_driver_path = "\\Users\\sphar\\Desktop\\Python 101\\Driver\\chromedriver"
+chrome_driver_path = "chromedriver_Path"
 driver = webdriver.Chrome(executable_path = chrome_driver_path)
 driver.get("http://secure-retreat-92358.herokuapp.com/")
 search_First = driver.find_element(by= By.NAME,value="fName")
